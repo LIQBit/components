@@ -1,52 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import faker from 'faker';
+import CommentDetail from './CommentDetail';
 
 const App = () => {
     return (
         <div className="ui container comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={faker.image.avatar()} />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Bob
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 9:00pm</span>
-                    </div>
-                    <div className="text">Nice blog post buddy!</div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={faker.image.avatar()} />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Bob
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 9:00pm</span>
-                    </div>
-                    <div className="text">Nice blog post buddy!</div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" src={faker.image.avatar()} />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Bob
-                    </a>
-                    <div className="metadata">
-                        <span className="date">Today at 9:00pm</span>
-                    </div>
-                    <div className="text">Nice blog post buddy!</div>
-                </div>
-            </div>
+           <CommentDetail 
+             author="Sam" 
+             timeAgo="Today at 4:45pm" 
+             commentText="I like counting peanut shells." 
+             avatar={faker.image.avatar()}/> 
+           <CommentDetail 
+             author="Alex" 
+             timeAgo="Today at 6:05pm" 
+             commentText="I can't believe it's not butter!"
+             avatar={faker.image.avatar()}/> 
+           <CommentDetail 
+             author="Harry Plinkett" 
+             timeAgo="Yesterday at 2:25am" 
+             commentText="Would anyone like a pizza roll?"
+             avatar={faker.image.avatar()}/> 
         </div>
     );
 };
